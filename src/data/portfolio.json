@@ -208,7 +208,7 @@
       "id": "greenyai",
       "featured": false,
       "title": "GreenyAI — RAG Chat Assistant",
-      "image": "assets/GreenyAI.png",
+      "image": "Public/GreenyAI.png",
       "badge": "● Live",
       "badgeStyle": "green",
       "tags": ["Streamlit", "Groq", "Supabase", "RAG"],
