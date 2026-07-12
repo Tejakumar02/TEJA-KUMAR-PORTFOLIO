@@ -1,0 +1,431 @@
+{
+  "theme": {
+    "dark": {
+      "bg": "#0a0c0f",
+      "bg2": "#0e1117",
+      "surface": "#111418",
+      "surface2": "#161b22",
+      "border": "#1c2128",
+      "border2": "#272f3d",
+      "green": "#00f964",
+      "cyan": "#0af",
+      "text": "#f0f4f8",
+      "text2": "#a8b8cc",
+      "text3": "#576574"
+    },
+    "light": {
+      "bg": "#f8fafc",
+      "bg2": "#f1f5f9",
+      "surface": "#ffffff",
+      "surface2": "#e2e8f0",
+      "border": "#e2e8f0",
+      "border2": "#cbd5e1",
+      "green": "#10b981",
+      "cyan": "#0284c7",
+      "text": "#0f172a",
+      "text2": "#475569",
+      "text3": "#94a3b8"
+    },
+    "fonts": {
+      "sans": "DM Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace",
+      "serif": "Instrument Serif, serif",
+      "display": "Bebas Neue, Oswald, Arial Narrow, sans-serif"
+    }
+  },
+  "sections": [
+    { "id": "hero", "enabled": true },
+    { "id": "stats", "enabled": true },
+    { "id": "about", "enabled": true },
+    { "id": "terminal", "enabled": true },
+    { "id": "experience", "enabled": true },
+    { "id": "projects", "enabled": true },
+    { "id": "skills", "enabled": true },
+    { "id": "process", "enabled": true },
+    { "id": "contact", "enabled": true }
+  ],
+  "site": {
+    "title": "Teja Kumar G S | AI Engineer"
+  },
+  "navigation": {
+    "logoText": "TK",
+    "resumeLink": "https://drive.google.com/file/d/1iUBKaFwfteRhIay1O5LBBQhnvPVxpYuy/view?usp=sharing",
+    "links": [
+      { "label": "About", "target": "#about" },
+      { "label": "Experience", "target": "#experience" },
+      { "label": "Projects", "target": "#projects" },
+      { "label": "Skills", "target": "#skills" },
+      { "label": "Contact", "target": "#contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI Engineer  ·  Computer Vision  ·  GenAI  ·  Real-Time Systems",
+    "firstName": "Teja Kumar",
+    "lastNameSuffix": "G S",
+    "roleDetails": [
+      { "text": "Chennai, India", "type": "text" },
+      { "text": "MSc. Information Technology", "type": "text" },
+      { "text": "Open to Opportunities", "type": "highlight" }
+    ],
+    "description": "I build computer vision systems that don't just detect things — they decide things. My focus is turning raw model output into signals a factory floor can actually trust, using spatial logic and temporal tracking, and owning the pipeline end to end, from raw data to live deployment.",
+    "cta": [
+      { "label": "View Work ↓", "target": "#projects", "style": "primary" },
+      { "label": "Get in Touch", "target": "#contact", "style": "ghost" }
+    ],
+    "strip": [
+      {
+        "label": "jayaramteja6@gmail.com",
+        "href": "mailto:jayaramteja6@gmail.com"
+      },
+      { "label": "+91 638 376 6950", "href": "tel:+916383766950" },
+      {
+        "label": "GitHub ↗",
+        "href": "https://github.com/Tejakumar02",
+        "external": true
+      },
+      {
+        "label": "LinkedIn ↗",
+        "href": "https://www.linkedin.com/in/teja-kumar-g-s-373b6733a/",
+        "external": true
+      }
+    ]
+  },
+  "stats": [
+    { "value": "0.92", "label": "mAP50 Score" },
+    { "value": "13+", "label": "Inference it/s" },
+    { "value": "17K+", "label": "Images Trained" },
+    { "value": "90K+", "label": "Annotations" }
+  ],
+  "about": {
+    "heading": "Building AI systems that\nwork in the real world.",
+    "paragraphs": [
+      "A high mAP score is where the real work starts, not where it ends. Once a model hits a factory floor, it has to reason about <strong>position, sequence, and time</strong> — not just 'is the object there.' A detection that's right 98% of the time can still be useless in production if the other 2% sets off a false alarm every ten minutes.",
+      "That's the gap I work in. I layer <strong>centroid-based spatial checks</strong>, temporal smoothing, and rule-based state machines on top of detection models, so the output is something an operations team can actually act on — not just a bounding box.",
+      "I own the whole pipeline: labeling the data, training the model, shipping it, watching how it behaves in production, and writing down exactly where it still breaks, so <strong>nobody gets surprised later</strong>."
+    ],
+    "constraintsBox": {
+      "title": "System Constraints I Work Under",
+      "items": [
+        "Fixed camera placement · constant field-of-view",
+        "Offline-only inference — no cloud access",
+        "Latency-sensitive pipeline under continuous operation",
+        "No model retraining allowed post-deployment",
+        "Real-world noise: motion blur, hand occlusion, lighting shifts"
+      ]
+    }
+  },
+  "terminal": {
+    "title": "TERMINAL_V.2.0",
+    "sequence": [
+      { "type": "cmd", "value": "root@cyber : ~ $ cd sequence" },
+      { "type": "orange", "value": "> Loading skills modules..." },
+      { "type": "orange", "value": "> Compiling experience protocols..." },
+      { "type": "yellow", "value": "System Ready:" },
+      { "type": "white", "value": "I'm an AI Engineer" },
+      { "type": "white", "value": "mAP50: 0.92  ·  Inference: 13+ FPS" },
+      { "type": "white", "value": "Chennai, India" },
+      { "type": "gap" },
+      { "type": "cmd", "value": "root@cyber : ~ $ ls skills" },
+      { "type": "gap" },
+      { "type": "orange", "value": "> Skills loaded:" },
+      { "type": "bullet", "value": "YOLO | OpenCV | Python" },
+      { "type": "bullet", "value": "Flask | FastAPI | Docker" },
+      { "type": "bullet", "value": "LangChain | RAG | Ollama" },
+      { "type": "bullet", "value": "PaddleOCR | Tesseract | PyMuPDF" },
+      { "type": "bullet", "value": "Git | GitHub | CVAT" },
+      { "type": "bullet", "value": "LLM" }
+    ]
+  },
+  "experience": {
+    "jobs": [
+      {
+        "id": "j1",
+        "title": "AI Engineer Intern",
+        "company": "Defect Scanner",
+        "period": "Jul 2025 – Jan 2026",
+        "bullets": [
+          "Trained YOLO on 17K+ images (90K+ CVAT annotations) — achieved mAP50 of <strong>0.92</strong> with stable inference at <strong>13+ FPS</strong> in live production.",
+          "Layered centroid-based spatial validation to confirm tool presence within predefined work zones; introduced temporal smoothing and state-machine tracking to suppress false positives from motion blur and operator hand overlap.",
+          "Integrated hardware alert system (tower lamp + buzzer) for real-time enforcement — reduced manual inspection effort by <strong>~40%</strong>.",
+          "Built and deployed Docker-ready Flask REST API with live monitoring dashboard. Full pipeline: CVAT annotation → training → deployment → production monitoring."
+        ]
+      },
+      {
+        "id": "j2",
+        "title": "DL Engineer Intern",
+        "company": "FDAI",
+        "period": "Dec 2024 – Jun 2025",
+        "bullets": [
+          "Built RAG pipelines using LangChain + ChromaDB with locally hosted LLMs via Ollama (Mistral, LLaMA) — zero cloud dependency, fully air-gapped.",
+          "Developed multimodal document understanding pipelines — PaddleOCR + Tesseract + HuggingFace Transformers for text, tables, and named entity extraction.",
+          "Deployed all models on-premises for secure, low-latency inference. Exposed capabilities via FastAPI endpoints for stakeholder demos."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "MSc. Information Technology",
+        "university": "University of Madras, Chennai",
+        "period": "Aug 2023 – May 2025"
+      },
+      {
+        "degree": "BSc. Computer Science",
+        "university": "Government Arts College , Nandanam, Chennai",
+        "period": "SEP 2020 – JUN 2023"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "defect-scanner",
+      "featured": true,
+      "title": "Production-Line Defect Scanner",
+      "image": "AL_Inspection.png",
+      "badge": "● Production",
+      "badgeStyle": "green",
+      "tags": ["YOLOv8", "OpenCV", "Flask", "Docker", "CVAT"],
+      "description": "A fixed-camera vision system that checks drill-tightening compliance on the assembly line. Frame-by-frame detection alone wasn't reliable enough, so I built a logic layer on top — centroid ROI checks, a state machine, and temporal smoothing — that turns noisy detections into a compliance signal the floor can actually trust.",
+      "link": "https://github.com/Tejakumar02/AL-Tower-Assembly-Inspector.git",
+      "linkLabel": "View Repository ↗",
+      "designDecisions": {
+        "title": "Design Decisions",
+        "bullets": [
+          "Fixed geometry eliminated need for homography",
+          "Centroid over IoU — handles tool shape variance",
+          "Known failure: extreme occlusion during fast motion"
+        ]
+      },
+      "metrics": [
+        { "key": "mAP50", "val": "0.92" },
+        { "key": "Inference", "val": "13+ FPS" },
+        { "key": "Compliance", "val": "~95%" },
+        { "key": "Manual ↓", "val": "~40%" },
+        { "key": "Dataset", "val": "17K+ imgs" },
+        { "key": "Annotations", "val": "90K+" }
+      ]
+    },
+    {
+      "id": "greenyai",
+      "featured": false,
+      "title": "GreenyAI — RAG Chat Assistant",
+      "image": "GreenyAI.png",
+      "badge": "● Live",
+      "badgeStyle": "green",
+      "tags": ["Streamlit", "Groq", "Supabase", "RAG"],
+      "description": "A chat assistant that actually reads what you hand it — drop in a PDF and it answers questions grounded in that document, powered by Groq-hosted Llama models with instant model switching. Conversations persist across sessions via Supabase, with one-click chat export built in.",
+      "link": "https://greenyai.streamlit.app/",
+      "linkLabel": "Try it Live ↗"
+    },
+    {
+      "id": "rag-system",
+      "featured": false,
+      "title": "Offline RAG Document Intelligence",
+      "fallbackIcon": "🤖",
+      "badge": "Air-Gapped",
+      "badgeStyle": "blue",
+      "tags": ["LangChain", "ChromaDB", "Ollama", "FastAPI"],
+      "description": "An offline Q&A and summarization pipeline — Mistral and LLaMA running locally through Ollama, with PaddleOCR, Tesseract, and HuggingFace handling multimodal extraction. No cloud calls, built for air-gapped enterprise environments.",
+      "link": "https://github.com/Tejakumar02/RAG_System",
+      "linkLabel": "View Repository ↗"
+    },
+    {
+      "id": "qc-automation",
+      "featured": false,
+      "title": "QC Workflow Automation",
+      "fallbackIcon": "📄",
+      "tags": ["PyMuPDF", "Streamlit", "OpenPyXL"],
+      "description": "Replaced a fully manual QC process with batch PDF processing — pulls 35+ structured fields across 50+ PDFs per run and outputs a formatted Excel report. Cut review time by roughly 90%.",
+      "link": "https://github.com/Tejakumar02/QC-Workflow-AutomationSystem.git",
+      "linkLabel": "View Repository ↗"
+    },
+    {
+      "id": "job-search",
+      "featured": false,
+      "title": "Automated Job Search System",
+      "fallbackIcon": "🔍",
+      "tags": ["Python", "Scraping", "NLP"],
+      "description": "Scrapes job postings across multiple platforms, ranks them by keyword relevance, dedupes across sources, and tracks everything on one dashboard — a fully automated path from search to shortlist.",
+      "link": "https://github.com/Tejakumar02/Automated-Job-Search-System",
+      "linkLabel": "View Repository ↗"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Computer Vision",
+      "title": "Real-Time Detection",
+      "description": "YOLO-based detection, centroid spatial validation, ROI extraction, temporal state machines for industrial CV.",
+      "tags": ["YOLOv8", "OpenCV", "Centroid", "ROI"]
+    },
+    {
+      "category": "Data & Training",
+      "title": "Model Training & Curation",
+      "description": "Custom datasets (17K+ images), CVAT labeling, augmentation pipelines, mAP evaluation against production metrics.",
+      "tags": ["CVAT", "Augmentation", "mAP"]
+    },
+    {
+      "category": "GenAI / LLMs",
+      "title": "Offline RAG Pipelines",
+      "description": "LangChain + ChromaDB vector retrieval. Local LLM inference via Ollama — Mistral, LLaMA. Also shipped a Groq-hosted RAG chat app with Supabase-backed history — air-gapped or cloud, depending on what the job needs.",
+      "tags": ["LangChain", "Ollama", "ChromaDB", "RAG", "Groq", "Supabase"]
+    },
+    {
+      "category": "OCR & Document AI",
+      "title": "Model Extraction",
+      "description": "PaddleOCR, Tesseract, PyMuPDF for text, tables, NER, and structured field extraction from diverse document formats.",
+      "tags": ["PaddleOCR", "Tesseract", "PyMuPDF"]
+    },
+    {
+      "category": "Deployment",
+      "title": "Production Systems",
+      "description": "Docker, Flask, FastAPI. Real-time inference pipelines. On-premises, air-gapped deployments with zero cloud dependency.",
+      "tags": ["Docker", "Flask", "FastAPI", "On-Prem"]
+    },
+    {
+      "category": "Core & Collab",
+      "title": "Python & Version Control",
+      "description": "Python across all ML/AI pipelines. Git + GitHub for team workflows, branching strategies, PRs, and merge resolution.",
+      "tags": ["Python", "Git", "GitHub", "Streamlit"]
+    }
+  ],
+  "process": {
+    "heading": "How I Build",
+    "steps": [
+      {
+        "num": 1,
+        "title": "Define & Scope",
+        "description": "Map the process, identify the detection target, camera constraints, and what a reliable signal looks like."
+      },
+      {
+        "num": 2,
+        "title": "Curate Data",
+        "description": "Label with CVAT. Build datasets that cover failure modes — not just the clean cases. Augment for production variance."
+      },
+      {
+        "num": 3,
+        "title": "Train & Validate",
+        "description": "Train YOLO models. Evaluate against real production metrics. Iterate until the model handles noise."
+      },
+      {
+        "num": 4,
+        "title": "Build Logic Layer",
+        "description": "Centroid tracking, ROI filters, temporal smoothing, state machines. Turn detections into decisions."
+      },
+      {
+        "num": 5,
+        "title": "Deploy & Document",
+        "description": "Flask API, Docker, monitoring dashboard. Offline. Known-failure cases documented. No retraining post-deployment."
+      }
+    ],
+    "chatWidget": {
+      "agentName": "Teja Kumar",
+      "status": "Available for work",
+      "initials": "TK",
+      "messages": [
+        {
+          "sender": "agent",
+          "label": "Problem Definition",
+          "bubble": "Understand what needs to be detected and what makes a valid vs. invalid state in production."
+        },
+        {
+          "sender": "user",
+          "icon": "📸",
+          "label": "Data Curation",
+          "bubble": "17K+ images, 90K+ annotations — covering edge cases and real failure modes."
+        },
+        {
+          "sender": "agent",
+          "label": "Spatial + Temporal Logic",
+          "bubble": "Centroid ROI + state machine on top of YOLO. Detections become decisions."
+        },
+        {
+          "sender": "user",
+          "icon": "🚀",
+          "label": "Deploy & Monitor",
+          "bubble": "Flask API · Docker · Air-gapped · Continuous monitoring · Known failures logged."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "availability": {
+      "status": "Open to Opportunities",
+      "text": "Looking for roles in applied computer vision, industrial AI, or real-time ML systems — somewhere I can own a pipeline end to end, not just hand off a model and move on.\n\nBased in Chennai. Open to on-site, hybrid, or remote."
+    },
+    "HeroGetInTouch": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "icon": "Github",
+        "href": "https://github.com/Tejakumar02",
+        "color": "hover:text-[#00f964] hover:border-[#00f964]/30 hover:bg-[#00f964]/5 hover:shadow-[0_0_12px_rgba(0,249,100,0.2)]"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "icon": "Linkedin",
+        "href": "https://www.linkedin.com/in/teja-kumar-g-s-373b6733a/",
+        "color": "hover:text-[#0077b5] hover:border-[#0077b5]/30 hover:bg-[#0077b5]/5 hover:shadow-[0_0_12px_rgba(0,119,181,0.2)]"
+      },
+      {
+        "id": "email",
+        "label": "Email",
+        "icon": "Mail",
+        "href": "mailto:jayaramteja6@gmail.com",
+        "color": "hover:text-green hover:border-green/30 hover:bg-green/5 hover:shadow-[0_0_12px_rgba(0,249,100,0.15)]"
+      }
+    ],
+    "channels": [
+      {
+        "type": "email",
+        "icon": "✉",
+        "label": "Email",
+        "value": "jayaramteja6@gmail.com",
+        "href": "mailto:jayaramteja6@gmail.com",
+        "arrow": true
+      },
+      {
+        "type": "phone",
+        "icon": "📞",
+        "label": "Phone",
+        "value": "+91 638 376 6950",
+        "href": "tel:+916383766950",
+        "arrow": false
+      },
+      {
+        "type": "linkedin",
+        "icon": "in",
+        "label": "LinkedIn",
+        "value": "teja-kumar-g-s-373b6733a",
+        "href": "https://www.linkedin.com/in/teja-kumar-g-s-373b6733a/",
+        "external": true,
+        "arrow": true
+      },
+      {
+        "type": "github",
+        "icon": "⌥",
+        "label": "GitHub",
+        "value": "Tejakumar02",
+        "href": "https://github.com/Tejakumar02",
+        "external": true,
+        "arrow": true
+      }
+    ]
+  },
+  "footer": {
+    "copy": "Teja Kumar G S · Chennai, India",
+    "links": [
+      { "label": "Email", "href": "mailto:jayaramteja6@gmail.com" },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/teja-kumar-g-s-373b6733a/",
+        "external": true
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Tejakumar02",
+        "external": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-border: var(--border);
+  --color-border2: var(--border2);
+  --color-green: var(--green);
+  --color-cyan: var(--cyan);
+  --color-text: var(--text);
+  --color-text2: var(--text2);
+  --color-text3: var(--text3);
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Instrument Serif", serif;
+  --font-display: "Bebas Neue", sans-serif;
+}
+
+/* ─────────────────────────────────────────
+   TOKENS & CUSTOM VARS (SUPPORTING BOTH MODES)
+   ───────────────────────────────────────── */
+:root {
+  --bg:          #07080a;
+  --bg2:         #0c0e12;
+  --surface:     #111319;
+  --surface2:    #171a22;
+  --border:      #1f242e;
+  --border2:     #2c3342;
+  --green:       #00f964;
+  --cyan:        #00e1ff;
+  --text:        #f1f5f9;
+  --text2:       #94a3b8;
+  --text3:       #475569;
+  --max:         1100px;
+  --nav-h:       64px;
+}
+
+/* Light mode specific tokens mapped directly */
+.light {
+  --bg:          #fafbfc;
+  --bg2:         #f1f5f9;
+  --surface:     #ffffff;
+  --surface2:    #f8fafc;
+  --border:      #e2e8f0;
+  --border2:     #cbd5e1;
+  --green:       #059669;
+  --cyan:        #0284c7;
+  --text:        #0f172a;
+  --text2:       #475569;
+  --text3:       #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.625;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium smooth transitions for key structural elements */
+body, nav, .nav-inner, .exp-card, .edu-row, .proj-card, .skill-card, .step-row, .chat-widget, .c-row, .avail-card, footer, .bubble, .t-bar, .terminal, .constraints-box, .stat-cell, .dnotes, .meta-item, button {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle background engineering grid */
+body::before {
+  content: '';
+  position: fixed; 
+  inset: 0; 
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Interactive custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+/* Hero ambient glow effects */
+.hero-glow-1 {
+  position: absolute;
+  top: -150px; 
+  left: 20%; 
+  width: 500px; 
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 249, 100, 0.05) 0%, transparent 70%);
+  pointer-events: none; 
+  z-index: 0;
+}
+.hero-glow-2 {
+  position: absolute;
+  top: 150px; 
+  right: 15%; 
+  width: 600px; 
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 225, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none; 
+  z-index: 0;
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS & KEYFRAMES
+   ───────────────────────────────────────── */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    box-shadow: inset 0 0 12px rgba(0,249,100,.08), 0 0 0 1px rgba(0,249,100,.04);
+    border-color: var(--border2);
+  }
+  50% {
+    box-shadow: inset 0 0 20px rgba(0,249,100,.25), 0 0 16px rgba(0,249,100,.20);
+    border-color: rgba(0,249,100,.4);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes blink { 
+  0%, 100% { opacity: 1; } 
+  50% { opacity: .2; } 
+}
+
+@keyframes cur { 
+  0%, 100% { opacity: 1; } 
+  50% { opacity: 0; } 
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.logo-pulse-animated {
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+.logo-pulse-animated:hover {
+  animation-play-state: paused;
+  border-color: var(--green);
+  box-shadow: inset 0 0 16px rgba(0,249,100,.18), 0 0 20px rgba(0,249,100,.25);
+  transform: scale(1.02);
+}
+
+.blink-animation {
+  animation: blink 2.2s infinite;
+}
+
+.pulse-glow-dot {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.terminal-cursor {
+  display: inline-block; 
+  width: 8px; 
+  height: 15px;
+  background: var(--text2); 
+  vertical-align: middle; 
+  margin-left: 2px;
+  animation: cur 1.1s step-end infinite;
+}
+
+/* ── IMAGE HANDLERS ── */
+.proj-img-bg {
+  position: absolute; 
+  inset: 0; 
+  z-index: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  filter: blur(28px) brightness(.4) saturate(1.2);
+  transform: scale(1.25);
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.proj-img-fg {
+  position: relative; 
+  z-index: 1;
+  width: 100%; 
+  height: 100%;
+  object-fit: contain; 
+  object-position: center;
+  display: block;
+  transition: transform .45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scanning effect for technology feeling */
+.proj-scanlines::after {
+  content: ''; 
+  position: absolute; 
+  inset: 0; 
+  z-index: 2; 
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,249,100,.012) 3px, rgba(0,249,100,.012) 4px);
+}
+
+/* ── SCROLL REVEAL UTILITIES ── */
+.reveal-transition {
+  opacity: 0; 
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(0.16, 1, 0.3, 1), transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-transition.in {
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+/* ── EXPERIENCE ACCORDION HEIGHT TRANSITION ── */
+.exp-body-transition {
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height .45s cubic-bezier(0.16, 1, 0.3, 1), padding .45s cubic-bezier(0.16, 1, 0.3, 1), opacity .45s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+}
+.exp-body-transition.open {
+  max-height: 600px;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .exp-body-transition.open {
+    max-height: 1000px;
+  }
+}
+
+/* Premium glassy gradients */
+.premium-glass {
+  background: rgba(var(--surface), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+/* Soft hover glow accents */
+.glow-on-hover:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 24px var(--green-glow);
+}
+
+/* Explicit animation delay classes for standard, high-reliability hero entrances */
+.hero-anim-1 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards; opacity: 0; }
+.hero-anim-2 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards; opacity: 0; }
+.hero-anim-3 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; opacity: 0; }
+.hero-anim-4 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards; opacity: 0; }
+.hero-anim-5 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards; opacity: 0; }
+.hero-anim-6 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards; opacity: 0; }
+.hero-anim-7 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards; opacity: 0; }
+.hero-anim-8 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards; opacity: 0; }
+
