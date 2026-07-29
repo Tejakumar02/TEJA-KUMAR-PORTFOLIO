@@ -207,12 +207,12 @@
     {
       "id": "greenyai",
       "featured": false,
-      "title": "GreenyAI — RAG Chat Assistant",
+      "title": "GreenyAI — Multimodal AI Assistant",
       "image": "assets/GreenyAI.png",
       "badge": "● Live",
       "badgeStyle": "green",
-      "tags": ["Streamlit", "Groq", "Supabase", "RAG"],
-      "description": "A chat assistant that actually reads what you hand it — drop in a PDF and it answers questions grounded in that document, powered by Groq-hosted Llama models with instant model switching. Conversations persist across sessions via Supabase, with one-click chat export built in.",
+      "tags": ["Groq", "Gemini Vision", "Tavily", "Supabase", "RAG"],
+      "description": "A full-featured chat assistant, not just single-turn Q&A. Upload a PDF and it answers grounded in that document via RAG; upload an image and Gemini Vision reasons about it; toggle live web search (Tavily) for cited, up-to-date answers. Multi-chat sessions persist across reloads via Supabase, with one-click export and an admin panel for tuning the system prompt on the fly.",
       "link": "https://greenyai.streamlit.app/",
       "linkLabel": "Try it Live ↗"
     },
