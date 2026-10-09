@@ -568,14 +568,14 @@ export default function App() {
                               key={proj.id}
                               className="group col-span-1 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] bg-surface border border-border rounded-2xl overflow-hidden hover:border-border2/80 shadow-xl hover:shadow-2xl hover:shadow-green/2 transition-all duration-300"
                             >
-                              {/* Left Column: Media & Primary Core Context */}
+                                                            {/* Left Column: Media & Primary Core Context */}
                               <div className="flex flex-col border-b lg:border-b-0 lg:border-r border-border">
                                 {/* Visual Media Cover wrapper */}
                                 <a
                                   href={proj.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="proj-scanlines relative flex items-center justify-center min-h-[240px] md:min-h-[300px] bg-black overflow-hidden cursor-pointer w-full"
+                                  className="proj-scanlines relative flex items-center justify-center bg-black overflow-hidden cursor-pointer w-full"
                                 >
                                   <ImageWithFallback
                                     src={proj.image}
@@ -584,16 +584,18 @@ export default function App() {
                                     classNameBg="proj-img-bg opacity-90 group-hover:opacity-70 transition-all duration-500 scale-100 group-hover:scale-105"
                                     classNameFg="proj-img-fg transition-transform duration-500"
                                   />
-                                  <span className="absolute top-4 right-4 z-10 font-mono text-[0.62rem] font-bold px-3 py-1 rounded-md bg-green/10 backdrop-blur-md border border-green/30 text-green uppercase tracking-wider shadow-sm">
-                                    {proj.badge}
-                                  </span>
                                 </a>
 
                                 {/* Left Main Content Block */}
                                 <div className="p-6 md:p-8 flex flex-col gap-4 justify-between flex-1">
                                   <div className="flex flex-col gap-3.5">
                                     {/* Dynamic Core Tech Tags */}
-                                    <div className="flex flex-wrap gap-1.5">
+                                    <div className="flex flex-wrap items-center gap-1.5">
+                                      {proj.badge && (
+                                        <span className="font-mono text-[0.62rem] font-bold px-2.5 py-0.5 rounded-md bg-green/10 border border-green/30 text-green uppercase tracking-wider">
+                                          {proj.badge}
+                                        </span>
+                                      )}
                                       {proj.tags.map((tag, tIdx) => (
                                         <span
                                           key={tIdx}
@@ -698,12 +700,12 @@ export default function App() {
                               key={proj.id}
                               className="group bg-surface border border-border rounded-xl overflow-hidden flex flex-col hover:border-border2 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-green/1 transition-all duration-300"
                             >
-                              {/* Aspect-Ratio Restricted Top Media Element */}
+                                                            {/* Aspect-Ratio Restricted Top Media Element */}
                               <a
                                 href={proj.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative h-[170px] flex items-center justify-center bg-black overflow-hidden cursor-pointer group-hover:opacity-90 transition-opacity"
+                                className="relative flex items-center justify-center bg-black overflow-hidden cursor-pointer group-hover:opacity-90 transition-opacity"
                               >
                                 <ImageWithFallback
                                   src={proj.image}
@@ -712,24 +714,24 @@ export default function App() {
                                   classNameBg="proj-img-bg opacity-90 group-hover:scale-105 transition-transform duration-500"
                                   classNameFg="proj-img-fg transition-transform duration-500"
                                 />
-                                {proj.badge && (
-                                  <span
-                                    className={`absolute top-4 right-4 z-10 font-mono text-[0.6rem] font-bold px-2.5 py-0.5 rounded-md border backdrop-blur-md uppercase tracking-wider ${
-                                      proj.badgeStyle === "blue"
-                                        ? "bg-cyan/10 border-cyan/20 text-cyan"
-                                        : "bg-green/10 border-green/20 text-green"
-                                    }`}
-                                  >
-                                    {proj.badge}
-                                  </span>
-                                )}
                               </a>
 
                               {/* Interior Content Column Container */}
                               <div className="p-6 flex flex-col gap-4 justify-between flex-1 min-h-0">
                                 <div className="flex flex-col gap-3">
                                   {/* Flex Inline Badges */}
-                                  <div className="flex flex-wrap gap-1">
+                                  <div className="flex flex-wrap items-center gap-1">
+                                    {proj.badge && (
+                                      <span
+                                        className={`font-mono text-[0.6rem] font-bold px-2.5 py-0.5 rounded-md border uppercase tracking-wider ${
+                                          proj.badgeStyle === "blue"
+                                            ? "bg-cyan/10 border-cyan/20 text-cyan"
+                                            : "bg-green/10 border-green/20 text-green"
+                                        }`}
+                                      >
+                                        {proj.badge}
+                                      </span>
+                                    )}
                                     {proj.tags.map((tag, tIdx) => (
                                       <span
                                         key={tIdx}
@@ -739,7 +741,6 @@ export default function App() {
                                       </span>
                                     ))}
                                   </div>
-
                                   <h3 className="text-[1.08rem] font-bold tracking-tight text-text group-hover:text-green transition-colors duration-300">
                                     {proj.title}
                                   </h3>
