@@ -27,6 +27,7 @@ export default function ImageWithFallback({
           fontSize: '2.4rem',
           width: '100%',
           height: '100%',
+          minHeight: '200px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
