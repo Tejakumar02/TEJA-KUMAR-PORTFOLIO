@@ -35,7 +35,7 @@ export default function Navbar({
           onClick={handleLogoClick}
         >
           {/* FIXED: Removed the slash opacity from the badge bg to ensure it always renders solid and visible */}
-          <span className="nav-logo-badge logo-pulse-animated inline-flex items-center justify-center w-10 h-10 shrink-0 bg-green border border-transparent rounded-full font-mono text-[0.75rem] font-bold leading-none text-bg hover:bg-transparent hover:text-green hover:border-green transition-all duration-300 cursor-pointer shadow-md shadow-green/5">
+          <span className="nav-logo-badge logo-pulse-animated inline-flex items-center justify-center w-10 h-10 shrink-0 bg-transparent border border-green rounded-full font-mono text-[1rem] font-bold leading-none text-green transition-all duration-300 cursor-pointer">
             {config.logoText}
           </span>
         </a>
