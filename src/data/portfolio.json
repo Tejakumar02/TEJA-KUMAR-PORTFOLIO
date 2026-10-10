@@ -91,7 +91,7 @@
     ]
   },
   "stats": [
-    { "value": "0.92", "label": "mAP50 Score" },
+    { "value": "92.3%", "label": "mAP50 Score" },
     { "value": "13+", "label": "Inference it/s" },
     { "value": "17K+", "label": "Images Trained" },
     { "value": "90K+", "label": "Annotations" }
@@ -122,7 +122,7 @@
       { "type": "orange", "value": "> Compiling experience protocols..." },
       { "type": "yellow", "value": "System Ready:" },
       { "type": "white", "value": "I'm an AI Engineer" },
-      { "type": "white", "value": "mAP50: 0.92  ·  Inference: 13+ FPS" },
+      { "type": "white", "value": "mAP50: 92.3%  ·  Inference: 13+ FPS" },
       { "type": "white", "value": "Chennai, India" },
       { "type": "gap" },
       { "type": "cmd", "value": "root@cyber : ~ $ ls skills" },
@@ -144,7 +144,7 @@
         "company": "Defect Scanner",
         "period": "Jul 2025 – Jan 2026",
         "bullets": [
-          "Trained YOLO on 17K+ images (90K+ CVAT annotations) — achieved mAP50 of <strong>0.92</strong> with stable inference at <strong>13+ FPS</strong> in live production.",
+          "Trained YOLO on 17K+ images (90K+ CVAT annotations) — achieved mAP50 of <strong>92.3%</strong> with stable inference at <strong>13+ FPS</strong> in live production.",
           "Layered centroid-based spatial validation to confirm tool presence within predefined work zones; introduced temporal smoothing and state-machine tracking to suppress false positives from motion blur and operator hand overlap.",
           "Integrated hardware alert system (tower lamp + buzzer) for real-time enforcement — reduced manual inspection effort by <strong>~40%</strong>.",
           "Built and deployed Docker-ready Flask REST API with live monitoring dashboard. Full pipeline: CVAT annotation → training → deployment → production monitoring."
@@ -196,7 +196,7 @@
         ]
       },
       "metrics": [
-        { "key": "mAP50", "val": "0.92" },
+        { "key": "mAP50", "val": "92.3%" },
         { "key": "Inference", "val": "13+ FPS" },
         { "key": "Compliance", "val": "~95%" },
         { "key": "Manual ↓", "val": "~40%" },
