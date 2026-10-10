@@ -184,7 +184,7 @@
       "badge": "● Production",
       "badgeStyle": "green",
       "tags": ["YOLOv12x", "OpenCV", "Flask", "Docker", "CVAT"],
-      "description": "A fixed-camera vision system that checks drill-tightening compliance on the assembly line. Frame-by-frame detection alone wasn't reliable enough, so I built a logic layer on top — centroid ROI checks, a state machine, and temporal smoothing — that turns noisy detections into a compliance signal the floor can actually trust.",
+            "description": "A fixed-camera vision system that checks drill-tightening compliance and catches missed circlip / interlock fitments on the assembly line. Frame-by-frame detection alone wasn't reliable enough, so I built a logic layer on top — centroid ROI checks, a state machine, and temporal smoothing — that turns noisy detections into a compliance signal the floor can actually trust.",
       "link": "https://github.com/Tejakumar02/AL-Tower-Assembly-Inspector.git",
       "linkLabel": "View Repository ↗",
       "designDecisions": {
