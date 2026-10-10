@@ -183,7 +183,7 @@
       "image": "assets/AL_Inspection.png",
       "badge": "● Production",
       "badgeStyle": "green",
-      "tags": ["YOLOv8", "OpenCV", "Flask", "Docker", "CVAT"],
+      "tags": ["YOLOv12x", "OpenCV", "Flask", "Docker", "CVAT"],
       "description": "A fixed-camera vision system that checks drill-tightening compliance on the assembly line. Frame-by-frame detection alone wasn't reliable enough, so I built a logic layer on top — centroid ROI checks, a state machine, and temporal smoothing — that turns noisy detections into a compliance signal the floor can actually trust.",
       "link": "https://github.com/Tejakumar02/AL-Tower-Assembly-Inspector.git",
       "linkLabel": "View Repository ↗",
@@ -254,7 +254,7 @@
       "category": "Computer Vision",
       "title": "Real-Time Detection",
       "description": "YOLO-based detection, centroid spatial validation, ROI extraction, temporal state machines for industrial CV.",
-      "tags": ["YOLOv8", "OpenCV", "Centroid", "ROI"]
+      "tags": ["YOLOv12x", "OpenCV", "Centroid", "ROI"]
     },
     {
       "category": "Data & Training",
